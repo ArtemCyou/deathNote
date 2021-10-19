@@ -80,7 +80,6 @@ func main() {
 	http.HandleFunc("/deathNote/new",newHandler)
 	http.HandleFunc("/deathNote/create",createHandler)
 	http.Handle("/image/", http.StripPrefix("/image/", http.FileServer(http.Dir("./image"))))
-	//http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
 	err := http.ListenAndServe("localhost:8080", nil)
 	log.Fatal(err)
 }

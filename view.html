@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>тетрадь смерти</title>
+
+</head>
+<body class="c-body">
+<h1> Книга смерти </h1>
+
+<div>
+    {{.SignatureCount}} количество убийств -
+    <a href="/deathNote/new"> Добавить жертву</a>
+</div>
+
+<div>
+    {{range.Signatures}}
+    <p>{{.}}</p>
+    {{end}}
+</div>
+<div>
+<p class="fig" ><img src="image/1.jpg" width="500" height="500" ></p>
+</div>
+</body>
+<style type="text/css">
+    .c-body{
+        background: black;
+        color: #ececec;
+    }
+
+    .fig {
+        text-align: center; /* Выравнивание по центру */
+    }
+    </style>
+</html>

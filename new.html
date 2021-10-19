@@ -1,0 +1,74 @@
+<body class="c-body">
+<h1>Введите имя жерты</h1>
+<div class="text-field text-field_floating">
+<form action="/deathNote/create" method="post">
+    <div><input class="text-field__input" type="text" name="signature"></div>
+    <div><input type="submit" class="c-button" value="убить"></div>
+</form>
+</div>
+
+</body>
+
+<style type="text/css">
+    .c-body{
+        background: black;
+        color: white;
+    }
+
+    .c-button {
+        appearance: none;
+        border: 0;
+        border-radius: 5px;
+        background: #0975d5;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    .c-button:hover {
+        background: #c20303;
+    }
+
+    .c-button:focus {
+        outline: none;
+        background: #c20303;
+        box-shadow: 0 0 0 4px #7b0202;
+    }
+
+    .text-field_floating {
+        position: relative;
+    }
+    .text-field_floating .text-field__input {
+        height: calc(2.5rem + 2px);
+        line-height: 1.25;
+        padding: 1rem 0.75rem;
+    }
+    .text-field_floating .text-field__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 1rem .75rem;
+        pointer-events: none;
+        border: 1px solid transparent;
+        transform-origin: 0 0;
+        transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+    }
+    .text-field_floating .text-field__input::-moz-placeholder {
+        color: transparent;
+    }
+    .text-field_floating .text-field__input::placeholder {
+        color: transparent;
+    }
+    .text-field_floating .text-field__input:focus,
+    .text-field_floating .text-field__input:not(:placeholder-shown) {
+        padding-top: 0.2rem;
+        padding-bottom: .2rem;
+        margin-bottom: 1rem;
+        border-radius: 3px;
+    }
+    .text-field_floating .text-field__input:focus~.text-field__label,
+    .text-field_floating .text-field__input:not(:placeholder-shown)~.text-field__label {
+        opacity: .65;
+        transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+    }
+</style>
